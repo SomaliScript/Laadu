@@ -1,6 +1,3 @@
-
-
-
 /*let playerNo = 0; // (red = 1, green = 2, yellow = 3, blue = 4)
 let playerName = null; // store defult playerName
 let diceBoxId = null; // store id value of dice box
@@ -12,4 +9,4 @@ let pass = false;
 let flag = false;
 let noOfPlayer = 4; // by default 4 player
 let winningOrder = [];
-
+*/
