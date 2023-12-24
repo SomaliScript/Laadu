@@ -1,3 +1,44 @@
 body {
-  background-color: green;
+  background-color: #58903C;
+}
+.sidebar{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.bottom-links {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-links a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px; 
+  display: block;
+}
+
+.bottom-links a:hover {
+  color: white;
 }
