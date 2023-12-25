@@ -1,9 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 body {
-  background-color: #58903C;
+  background-color:#302E2B;
+  display: flex;
+  flex-direction: column;
+  padding-left: 160px;
+}
+.container {
+  flex: 1 0 auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .sidebar{
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #DFDEDE;
   height: 100%;
   width: 160px;
   position: fixed;
@@ -15,15 +29,33 @@ body {
 }
 
 .sidebar a {
-  padding: 6px 8px 6px 16px;
+  font: Albula;
+  padding: 12px 20px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  margin: 0px;
+
+  color: #FFFFFF;
+  font-weight: 400px;
+  font-style: normal;
+  font-variant:normal;
+  font-kerning:auto;
+  font-optical-sizing: auto;  
+  font-stretch: 100%;
+  font-variation-settings:normal;
+  font-feature-settings:"ss01";
+  text-transform:none;
+  text-decoration:none solid rgb(255, 255, 255);
+  text-align:start;
+  text-indent:0px;
   display: block;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: gray;
 }
 
 .bottom-links {
@@ -32,7 +64,7 @@ body {
   width: 100%;
 }
 
-.bottom-links a {
+.bottom-links b {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 18px; 
@@ -46,10 +78,48 @@ body {
 .main {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  align-items: flex-start;
+  padding-right: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.card {
+  background-color:#4CAF50;
+  text-align: center;
+  box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 400px;
+  margin: 10px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.card img {
+  width: 100%;
+  padding:1-px 20px;
+  color: white;
+  display: block;
+}
+.card-footer {
+  background-color: f44336;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: auto;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
 .button {
-  background-color: #4CAF50; 
+  background-color:rgba(0, 0, 0, 0.5) ; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -65,4 +135,34 @@ body {
 .button span {
   display: block;
   margin-top: 20px; 
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  color: white;  
+  text-align: center;
+}
+.footer-container {
+  width:0 auto;
+  padding-right: 20px;
+}
+.footer-nac a{
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    padding-right: 10px;
+  }
+  body {
+    padding-left: 100px; 
+  }
+  .sidebar {
+    width: 100px;
+  }
 }
