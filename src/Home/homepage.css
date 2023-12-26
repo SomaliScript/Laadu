@@ -14,21 +14,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
 }
 .sidebar{
   background-color: rgba(0, 0, 0, 0.5);
   color: #DFDEDE;
-  height: 100%;
   width: 160px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
-.sidebar a {
+.sidebar a, .sidebar button {
   font: Albula;
   padding: 12px 20px;
   text-decoration: none;
@@ -51,30 +55,49 @@ body {
   text-decoration:none solid rgb(255, 255, 255);
   text-align:start;
   text-indent:0px;
-  display: block;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
 }
-
+.sidebar-brand {
+  font-size: 24px;
+  margin-bottom: 20px; 
+}
 .sidebar a:hover {
   color: gray;
 }
-
-.bottom-links {
-  position: absolute;
-  bottom: 0;
+.sidebar i {
+  margin-right: 10px; 
+}
+.sidebar-button {
+  background-color: #f2b137; 
+  color: #FFFFFF; 
+  padding: 10px;
+  margin-top: 10px; 
   width: 100%;
+  text-align: center;
+}
+.sidebar-button:hover {
+  background-color: #d9a334; 
 }
 
-.bottom-links b {
-  padding: 6px 8px 6px 16px;
+.bottom-links {
+  font-size: 14px; 
+  padding: 10px 15px;
+  width: 100%;
+}
+.bottom-links a{
   text-decoration: none;
-  font-size: 18px; 
+  box-sizing: border-box;
   display: block;
+  font-size: 10px;
+  padding: 12px 20px;
 }
 
 .bottom-links a:hover {
-  color: white;
+  color: #CCCCCC; 
+  background-color: transparent;
 }
-
 .main {
   display: flex;
   justify-content: center;
@@ -147,7 +170,7 @@ footer {
   width:0 auto;
   padding-right: 20px;
 }
-.footer-nac a{
+.footer-nav a{
   color: white;
   text-decoration: none;
   margin: 0 10px;
