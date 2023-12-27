@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 160px;
+  transition: background-color 0.3s ease;
 }
 .container {
   flex: 1 0 auto; 
@@ -98,6 +99,19 @@ body {
   color: #CCCCCC; 
   background-color: transparent;
 }
+
+/* Default background color */
+.dark-mode {
+  background-color:#302E2B;
+  color: white;
+}
+
+/* Light mode background color */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
 .main {
   display: flex;
   justify-content: center;
