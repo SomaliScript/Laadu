@@ -26,6 +26,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
+  bottom: 0;
   overflow-x: hidden;
   padding-top: 10px;
   display: flex;
@@ -220,4 +221,15 @@ footer {
   .sidebar {
     width: 100px;
   }
+  /* Stack icon above text on smaller screens */
+  .sidebar a i {
+    margin: 0;
+    display: block; 
+    margin-bottom: 5px;
+  }
+  /* Hide text for small devices */
+  .sidebar a span {
+    display: none;
+  }
+
 }
