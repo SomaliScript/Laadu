@@ -7,6 +7,8 @@ body {
   background-color:#302E2B;
   display: flex;
   flex-direction: column;
+  padding-left: 160px;
+  transition: background-color 0.3s ease;
 }
 .container {
   flex: 1; 
@@ -101,6 +103,19 @@ body {
   color: #CCCCCC; 
   background-color: transparent;
 }
+
+/* Default background color */
+.dark-mode {
+  background-color:#302E2B;
+  color: white;
+}
+
+/* Light mode background color */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
 .main {
   flex-grow: 1;
   display: flex;
@@ -205,6 +220,7 @@ footer {
 .footer-social a i {
   font-size: 20px;
 }
+
 
 @media (max-width: 768px) {
   .container {
