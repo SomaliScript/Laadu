@@ -30,23 +30,24 @@ body {
   left: 0;
   bottom: 0;
   overflow-x: hidden;
-  padding-top: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  justify-content: flex-start;
   transition: width 0.5s;
+  height: 100vh;
 }
 
 .sidebar a, .sidebar button {
   font: Albula;
-  padding: 12px 20px;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: normal;
   word-spacing: 0px;
-  margin: 0px;
+  margin-bottom: 10px;
+
+
 
   color: #FFFFFF;
   font-weight: 400px;
@@ -63,7 +64,7 @@ body {
   text-indent:0px;
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: 12px 15px;
 }
 .sidebar-brand {
   font-size: 24px;
@@ -88,16 +89,15 @@ body {
 }
 
 .bottom-links {
-  font-size: 14px; 
-  padding: 10px 15px;
-  width: 100%;
+  margin-top:auto;
+  font-size: 8px; 
 }
 .bottom-links a{
   text-decoration: none;
-  box-sizing: border-box;
-  display: block;
   font-size: 10px;
-  padding: 12px 20px;
+  width: calc(100% - 10px);
+  box-sizing: border-box;
+  margin-bottom: 10px; 
 }
 
 .bottom-links a:hover {
@@ -191,8 +191,9 @@ footer {
 
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 160px;
+  right: 0px;
+  z-index: 10;
 }
 
 .footer-nav {
