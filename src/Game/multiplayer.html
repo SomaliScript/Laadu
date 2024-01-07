@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playing Multiplayer</title>
+    <link rel="stylesheet" type="text/css" href="board.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+  <img>
+
+  <audio id="diceSound" >
+    <source src="/asset/audio/dice sound.mp3"type -="audio/mpeg">
+  </audio>
+
+  <audio id="Killed" >
+    <source src="/asset/audio/killed.mp3"type -="audio/mpeg">
+  </audio>
+
+  <audio id="Last" >
+    <source src="/asset/audio/Last.mp3"type -="audio/mpeg">
+  </audio>
+
+  <audio id="Outro" >
+    <source src="/asset/audio/outro.mp3"type -="audio/mpeg">
+  </audio>
+
+  <audio id="Move" >
+    <source src="/asset/audio/step.mp3"type -="audio/mpeg">
+  </audio>
+
+</head>
+<h1 text-align="center"></h1>
+<div class="board">
+
+  <div class="row">
+    <div class="red-section black-border" id="rPlayer">
+      <div class="white">
+       <div class="r-square pawn-box" id="in-r-1" >r-1
+       </div>
+        <div class="r-square pawn-box" id="in-r-2" >r-2
+        </div>
+        <div class="r-square pawn-box" id="in-r-3" >r-3
+        </div>
+        <div class="r-square pawn-box" id="in-r-4">r-4
+        </div>
+
+      </div>
+    </div>
+    <div class="lane-section">
+      <div class="row"><div class="box">24</div><div class="box">25</div><div class="box">26</div></div>
+      <div class="row"><div class="box">23</div><div class="box green"></div><div class="box green">27</div></div>
+      <div class="row"><div class="box">22</div><div class="box green"></div><div class="box">28</div></div>
+      <div class="row"><div class="box">21</div><div class="box green"></div><div class="box">29</div></div>
+      <div class="row"><div class="box">20</div><div class="box green"></div><div class="box">30</div></div>
+      <div class="row"><div class="box">19</div><div class="box green"></div><div class="box">31</div></div>
+    </div>
+    <div class="green-section black-border">
+      <div class="white">
+        <div class="g-square pawn-box" id="in-g-1">g-1</div>
+        <div class="g-square pawn-box" id="in-g-2">g-2</div>
+        <div class="g-square pawn-box" id="in-g-3">g-3</div>
+        <div class="g-square pawn-box" id="in-g-4">g-4</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="lane-section">
+      <div class="row">
+          <div class="box">13</div><div class="box red">14</div><div class="box">15</div>
+          <div class="box">16</div><div class="box">17</div><div class="box">18</div>
+      </div>
+      <div class="row">
+          <div class="box">12</div><div class="box red"></div><div class="box red"></div>
+          <div class="box red"></div><div class="box red"></div><div class="box red"></div>
+      </div>
+      <div class="row">
+          <div class="box">11</div><div class="box">10</div><div class="box">9</div>
+          <div class="box">8</div><div class="box">7</div><div class="box">6</div>
+      </div>
+    </div>
+    <div class="winning-section"></div>
+    <div class="lane-section">
+      <div class="row">
+          <div class="box">32</div><div class="box">33</div><div class="box">34</div>
+          <div class="box">35</div><div class="box">36</div><div class="box">37</div>
+          </div>
+      <div class="row">
+          <div class="box yellow"></div><div class="box yellow"></div><div class="box yellow"></div>
+          <div class="box yellow"></div><div class="box yellow"></div><div class="box">38</div>
+      </div>
+      <div class="row">
+          <div class="box">44</div><div class="box">43</div><div class="box">42</div>
+          <div class="box">41</div><div class="box yellow">40</div><div class="box">39</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="blue-section black-border">
+      <div class="white">
+        <div class="b-square pawn-box" id="in-b-1">b-1</div>
+        <div class="b-square pawn-box" id="in-b-2">b-2</div>
+        <div class="b-square pawn-box" id="in-b-3">b-3</div>
+        <div class="b-square pawn-box" id="in-b-4">b-4</div>
+      </div>
+    </div>
+    
+    <div class="lane-section">
+      <div class="row"><div class="box">5</div><div class="box blue"></div><div class="box">45</div></div>
+      <div class="row"><div class="box">4</div><div class="box blue"></div><div class="box">46</div></div>
+      <div class="row"><div class="box">3</div><div class="box blue"></div><div class="box">47</div></div>
+      <div class="row"><div class="box">2</div><div class="box blue"></div><div class="box">48</div></div>
+      <div class="row"><div class="box blue">1</div><div class="box blue"></div><div class="box">49</div></div>
+      <div class="row"><div class="box">52</div><div class="box">51</div><div class="box">50</div></div>
+    </div>
+    
+    
+    <div class="yellow-section black-border">
+      <div class="white">
+        <div class="y-square pawn-box" id="in-y-1">y1</div>
+        <div class="y-square pawn-box" id="in-y-2">y2</div>
+        <div class="y-square pawn-box" id="in-y-3">y3</div>
+        <div class="y-square pawn-box" id="in-y-4">y4</div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+<div></div>
+
+<div id="game-container">
+  <button id="start-button" class="hidden">Start Game</button>
+</div>
+
+
+<!--two players-->
+<div id="game-container">
+  <button id="two-player">Two players</button>
+</div>
+
+<!--three players-->
+<div id="game-container">
+  <button id="three-player">Three players</button>
+</div>
+
+<!--four players-->
+<div id="game-container">
+  <button id="four-player">Four players</button>
+</div>
+
+<script src="index.js"></script>
+<script src="/src/Game/game.js"></script>
+<script src="/src/Game/dir/board.js"></script>
+<script src="/src/Game/dir/path.js"></script>
+<script src="/src/Game/referee/dice.js"></script>
+<script src="/src/Game/referee/logic.js"></script>
+    
+</body>
+</html>
